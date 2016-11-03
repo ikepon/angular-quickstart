@@ -1,4 +1,7 @@
 ## Angular2 quickstart
+### App の起動
+`npm start`
+
 ### 基本的なファイルの役割
 - package.json
   identifies npm package dependencies for the project.
