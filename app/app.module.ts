@@ -7,14 +7,19 @@ import { FormsModule }   from '@angular/forms';
 // AppComponent を読みこんでる
 import { AppComponent }   from './app.component';
 
+// HeroDetailComponent の読み込み
+import { HeroDetailComponent } from './hero-detail.component';
+
+
 @NgModule({
-  imports:      [
+  imports: [
     BrowserModule,
     FormsModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroDetailComponent
   ],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

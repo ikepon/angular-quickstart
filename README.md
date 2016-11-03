@@ -48,3 +48,14 @@ https://angular.io/docs/ts/latest/guide/template-syntax.html#directives
 
 - Learn more about property bindings in the Template Syntax chapter.
 https://angular.io/docs/ts/latest/guide/template-syntax.html#property-binding
+
+- Naming conventions
+
+- Notice that we have an AppComponent in a file named app.component.ts and our new HeroDetailComponent is in a file named hero-detail.component.ts.
+
+- All of our component names end in "Component". All of our component file names end in ".component".
+
+- We spell our file names in lower dash case (AKA kebab-case) so we don't worry about case sensitivity on the server or in source control.
+
+- Learn more about the @Input() decorator in the Attribute Directives chapter.
+https://angular.io/docs/ts/latest/guide/attribute-directives.html#input
