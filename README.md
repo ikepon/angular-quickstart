@@ -19,3 +19,6 @@
   - a selector that specifies a simple CSS selector for an HTML element that represents the component.
   - a template that tells Angular how to render the component's view.
 - A component class that controls the appearance and behavior of a view through its template. Here, you only have the root component, AppComponent.
+
+- main.ts
+  initializes the platform that your application runs in.
