@@ -37,3 +37,7 @@ https://angular.io/docs/ts/latest/guide/template-syntax.html#ngModel
 - Learn more about ngFor and template input variables in the Displaying Data and Template Syntax chapters.
 https://angular.io/docs/ts/latest/guide/displaying-data.html#ngFor
 https://angular.io/docs/ts/latest/guide/template-syntax.html#ngFor
+
+- Learn more about Event Binding in the User Input and Templating Syntax chapters.
+https://angular.io/docs/ts/latest/guide/user-input.html
+https://angular.io/docs/ts/latest/guide/template-syntax.html#event-binding
