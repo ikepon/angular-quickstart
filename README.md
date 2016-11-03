@@ -9,3 +9,13 @@
 
 - app/app.module.ts
   the entry point to your application.
+
+- app/app.component.ts
+  the root component
+
+  - An import statement. Importing gives your component access to Angular's core @Component decorator function.
+
+- A @Component decorator that associates metadata with the AppComponent component class:
+  - a selector that specifies a simple CSS selector for an HTML element that represents the component.
+  - a template that tells Angular how to render the component's view.
+- A component class that controls the appearance and behavior of a view through its template. Here, you only have the root component, AppComponent.
