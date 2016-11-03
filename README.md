@@ -22,3 +22,7 @@
 
 - main.ts
   initializes the platform that your application runs in.
+
+  - JavaScript libraries: core-js polyfills for older browsers, the zone.js and reflect-metadata libraries needed by Angular, and the SystemJS library for module loading.
+- Configuration file for SystemJS, and a script where you import and run the app module which refers to the main file that you just wrote.
+- The <my-app> tag in the <body> which is where your app lives!
