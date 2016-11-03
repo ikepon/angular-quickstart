@@ -11,6 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 // ブラウザで表示させるために必要
 var platform_browser_1 = require('@angular/platform-browser');
+// Form用のmodule. two way binding に必要
+var forms_1 = require('@angular/forms');
 // AppComponent を読みこんでる
 var app_component_1 = require('./app.component');
 var AppModule = (function () {
@@ -18,8 +20,13 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule
+            ],
+            declarations: [
+                app_component_1.AppComponent
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

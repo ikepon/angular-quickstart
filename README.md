@@ -29,3 +29,7 @@
   - JavaScript libraries: core-js polyfills for older browsers, the zone.js and reflect-metadata libraries needed by Angular, and the SystemJS library for module loading.
 - Configuration file for SystemJS, and a script where you import and run the app module which refers to the main file that you just wrote.
 - The <my-app> tag in the <body> which is where your app lives!
+
+- Learn more about the FormsModule and ngModel in the Forms and Template Syntax chapters.
+https://angular.io/docs/ts/latest/guide/forms.html#ngModel
+https://angular.io/docs/ts/latest/guide/template-syntax.html#ngModel
