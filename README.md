@@ -33,3 +33,7 @@
 - Learn more about the FormsModule and ngModel in the Forms and Template Syntax chapters.
 https://angular.io/docs/ts/latest/guide/forms.html#ngModel
 https://angular.io/docs/ts/latest/guide/template-syntax.html#ngModel
+
+- Learn more about ngFor and template input variables in the Displaying Data and Template Syntax chapters.
+https://angular.io/docs/ts/latest/guide/displaying-data.html#ngFor
+https://angular.io/docs/ts/latest/guide/template-syntax.html#ngFor
