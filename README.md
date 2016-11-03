@@ -41,3 +41,10 @@ https://angular.io/docs/ts/latest/guide/template-syntax.html#ngFor
 - Learn more about Event Binding in the User Input and Templating Syntax chapters.
 https://angular.io/docs/ts/latest/guide/user-input.html
 https://angular.io/docs/ts/latest/guide/template-syntax.html#event-binding
+
+- Learn more about ngIf, ngFor and other structural directives in the Structural Directives and Template Syntax chapters.
+https://angular.io/docs/ts/latest/guide/structural-directives.html
+https://angular.io/docs/ts/latest/guide/template-syntax.html#directives
+
+- Learn more about property bindings in the Template Syntax chapter.
+https://angular.io/docs/ts/latest/guide/template-syntax.html#property-binding
