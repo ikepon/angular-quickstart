@@ -62,3 +62,8 @@ https://angular.io/docs/ts/latest/guide/attribute-directives.html#input
 
 - We've adopted a convention in which we spell the name of a service in lowercase followed by .service. If the service name were multi-word, we'd spell the base filename in lower dash-case. The SpecialSuperHeroService would be defined in the special-super-hero.service.ts file.
 
+- Learn more about Dependency Injection in the Dependency Injection chapter.
+https://angular.io/docs/ts/latest/guide/dependency-injection.html
+
+- Learn more about lifecycle hooks in the Lifecycle Hooks chapter.
+https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
