@@ -17,6 +17,10 @@ var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
 // HeroDetailComponent の読み込み
 var hero_detail_component_1 = require('./hero-detail.component');
+// HeroesComponent の読み込み
+var heroes_component_1 = require('./heroes.component');
+// HeroService の読み込み
+var hero_service_1 = require('./hero.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,7 +32,11 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                heroes_component_1.HeroesComponent,
                 hero_detail_component_1.HeroDetailComponent
+            ],
+            providers: [
+                hero_service_1.HeroService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

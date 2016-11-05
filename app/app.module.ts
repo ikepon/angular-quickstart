@@ -9,7 +9,10 @@ import { AppComponent }   from './app.component';
 
 // HeroDetailComponent の読み込み
 import { HeroDetailComponent } from './hero-detail.component';
-
+// HeroesComponent の読み込み
+import { HeroesComponent }     from './heroes.component';
+// HeroService の読み込み
+import { HeroService }         from './hero.service';
 
 @NgModule({
   imports: [
@@ -18,7 +21,11 @@ import { HeroDetailComponent } from './hero-detail.component';
   ],
   declarations: [
     AppComponent,
+    HeroesComponent,
     HeroDetailComponent
+  ],
+  providers: [
+    HeroService
   ],
   bootstrap: [ AppComponent ]
 })
