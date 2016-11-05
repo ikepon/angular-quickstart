@@ -59,3 +59,6 @@ https://angular.io/docs/ts/latest/guide/template-syntax.html#property-binding
 
 - Learn more about the @Input() decorator in the Attribute Directives chapter.
 https://angular.io/docs/ts/latest/guide/attribute-directives.html#input
+
+- We've adopted a convention in which we spell the name of a service in lowercase followed by .service. If the service name were multi-word, we'd spell the base filename in lower dash-case. The SpecialSuperHeroService would be defined in the special-super-hero.service.ts file.
+
