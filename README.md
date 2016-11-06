@@ -84,3 +84,5 @@ https://angular.io/docs/ts/latest/guide/router.html#link-parameters-array
 
 - Learn about the redirects in the Routing chapter.
 https://angular.io/docs/ts/latest/guide/router.html#!#redirect
+
+- The hero id is a number. Route parameters are always strings. So we convert the route parameter value to a number with the JavaScript (+) operator.
