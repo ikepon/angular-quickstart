@@ -13,6 +13,8 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 // Form用のmodule. two way binding に必要
 var forms_1 = require('@angular/forms');
+// Router用のmodule.
+var router_1 = require('@angular/router');
 // AppComponent を読みこんでる
 var app_component_1 = require('./app.component');
 // HeroDetailComponent の読み込み
@@ -28,7 +30,13 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                forms_1.FormsModule
+                forms_1.FormsModule,
+                router_1.RouterModule.forRoot([
+                    {
+                        path: 'heroes',
+                        component: heroes_component_1.HeroesComponent
+                    }
+                ])
             ],
             declarations: [
                 app_component_1.AppComponent,

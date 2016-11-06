@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 // Form用のmodule. two way binding に必要
 import { FormsModule }   from '@angular/forms';
 
+// Router用のmodule.
+import { RouterModule }   from '@angular/router';
+
 // AppComponent を読みこんでる
 import { AppComponent }   from './app.component';
 
@@ -17,7 +20,13 @@ import { HeroService }         from './hero.service';
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'heroes',
+        component: HeroesComponent
+      }
+    ])
   ],
   declarations: [
     AppComponent,
@@ -29,4 +38,5 @@ import { HeroService }         from './hero.service';
   ],
   bootstrap: [ AppComponent ]
 })
+
 export class AppModule { }

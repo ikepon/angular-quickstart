@@ -67,3 +67,17 @@ https://angular.io/docs/ts/latest/guide/dependency-injection.html
 
 - Learn more about lifecycle hooks in the Lifecycle Hooks chapter.
 https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
+
+- Routes tell the router which views to display when a user clicks a link or pastes a URL into the browser address bar.
+
+- This route definition has the following parts:
+  - path: the router matches this route's path to the URL in the browser address bar (heroes).
+  - component: the component that the router should create when navigating to this route (HeroesComponent).
+
+- Learn more about defining routes with Routes in the Routing chapter.
+https://angular.io/docs/ts/latest/guide/router.html
+
+- The forRoot method gives us the Router service providers and directives needed for routing, and performs the initial navigation based on the current browser URL.
+
+- Learn more about dynamic router links and the link parameters array in the Routing chapter.
+https://angular.io/docs/ts/latest/guide/router.html#link-parameters-array
