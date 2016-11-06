@@ -17,6 +17,8 @@ var forms_1 = require('@angular/forms');
 var router_1 = require('@angular/router');
 // AppComponent を読みこんでる
 var app_component_1 = require('./app.component');
+// DashboardComponent の読み込み
+var dashboard_component_1 = require('./dashboard.component');
 // HeroDetailComponent の読み込み
 var hero_detail_component_1 = require('./hero-detail.component');
 // HeroesComponent の読み込み
@@ -33,6 +35,15 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 router_1.RouterModule.forRoot([
                     {
+                        path: '',
+                        redirectTo: '/dashboard',
+                        pathMatch: 'full'
+                    },
+                    {
+                        path: 'dashboard',
+                        component: dashboard_component_1.DashboardComponent
+                    },
+                    {
                         path: 'heroes',
                         component: heroes_component_1.HeroesComponent
                     }
@@ -40,6 +51,7 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                dashboard_component_1.DashboardComponent,
                 heroes_component_1.HeroesComponent,
                 hero_detail_component_1.HeroDetailComponent
             ],

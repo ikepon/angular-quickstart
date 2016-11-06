@@ -10,6 +10,8 @@ import { RouterModule }   from '@angular/router';
 // AppComponent を読みこんでる
 import { AppComponent }   from './app.component';
 
+// DashboardComponent の読み込み
+import { DashboardComponent } from './dashboard.component';
 // HeroDetailComponent の読み込み
 import { HeroDetailComponent } from './hero-detail.component';
 // HeroesComponent の読み込み
@@ -23,6 +25,15 @@ import { HeroService }         from './hero.service';
     FormsModule,
     RouterModule.forRoot([
       {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
         path: 'heroes',
         component: HeroesComponent
       }
@@ -30,6 +41,7 @@ import { HeroService }         from './hero.service';
   ],
   declarations: [
     AppComponent,
+    DashboardComponent,
     HeroesComponent,
     HeroDetailComponent
   ],

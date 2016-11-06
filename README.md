@@ -81,3 +81,6 @@ https://angular.io/docs/ts/latest/guide/router.html
 
 - Learn more about dynamic router links and the link parameters array in the Routing chapter.
 https://angular.io/docs/ts/latest/guide/router.html#link-parameters-array
+
+- Learn about the redirects in the Routing chapter.
+https://angular.io/docs/ts/latest/guide/router.html#!#redirect
