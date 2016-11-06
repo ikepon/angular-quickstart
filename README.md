@@ -86,3 +86,6 @@ https://angular.io/docs/ts/latest/guide/router.html#link-parameters-array
 https://angular.io/docs/ts/latest/guide/router.html#!#redirect
 
 - The hero id is a number. Route parameters are always strings. So we convert the route parameter value to a number with the JavaScript (+) operator.
+
+- Going back too far could take us out of the application. That's acceptable in a demo. We'd guard against it in a real application, perhaps with the CanDeactivate guard.
+https://angular.io/docs/ts/latest/api/router/index/CanDeactivate-interface.html
