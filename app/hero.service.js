@@ -16,6 +16,10 @@ var HeroService = (function () {
         this.http = http;
         this.heroesUrl = 'app/heroes'; // URL to web api
     }
+    HeroService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        return Promise.reject(error.message || error);
+    };
     HeroService.prototype.getHeroes = function () {
         return this.http.get(this.heroesUrl)
             .toPromise()
