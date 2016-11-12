@@ -1,3 +1,4 @@
+import './rxjs-extensions';
 import { NgModule }      from '@angular/core';
 // ブラウザで表示させるために必要
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,6 +24,8 @@ import { DashboardComponent }  from './dashboard.component';
 import { HeroesComponent }     from './heroes.component';
 // HeroDetailComponent の読み込み
 import { HeroDetailComponent } from './hero-detail.component';
+// HeroSearchComponent の読み込み
+import { HeroSearchComponent } from './hero-search.component';
 // HeroService の読み込み
 import { HeroService }         from './hero.service';
 
@@ -39,7 +42,8 @@ import { HeroService }         from './hero.service';
     AppComponent,
     DashboardComponent,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroSearchComponent
   ],
   providers: [ HeroService ],
   bootstrap: [ AppComponent ]
