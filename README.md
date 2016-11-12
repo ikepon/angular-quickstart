@@ -90,5 +90,8 @@ https://angular.io/docs/ts/latest/guide/router.html#!#redirect
 - Going back too far could take us out of the application. That's acceptable in a demo. We'd guard against it in a real application, perhaps with the CanDeactivate guard.
 https://angular.io/docs/ts/latest/api/router/index/CanDeactivate-interface.html
 
-- Pipes are a good way to format strings, currency amounts, dates and other display data. 
+- Pipes are a good way to format strings, currency amounts, dates and other display data.
 https://angular.io/docs/ts/latest/guide/pipes.html
+
+- Learn more later about the in-memory web API in the HTTP client chapter.
+https://angular.io/docs/ts/latest/guide/server-communication.html#!#in-mem-web-api
