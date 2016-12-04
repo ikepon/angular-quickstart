@@ -23,12 +23,4 @@ export class DashboardComponent implements OnInit {
     this.heroService.getHeroes()
       .then(heroes => this.heroes = heroes.slice(1, 5));
   }
-
-  // The gotoDetail method navigates in two steps:
-  // 1. Set a route link parameters array
-  // 2. Pass the array to the router's navigate method
-  gotoDetail(hero: Hero): void {
-    let link = ['/detail', hero.id];
-    this.router.navigate(link);
-  }
 }

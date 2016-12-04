@@ -22,13 +22,6 @@ var DashboardComponent = (function () {
         this.heroService.getHeroes()
             .then(function (heroes) { return _this.heroes = heroes.slice(1, 5); });
     };
-    // The gotoDetail method navigates in two steps:
-    // 1. Set a route link parameters array
-    // 2. Pass the array to the router's navigate method
-    DashboardComponent.prototype.gotoDetail = function (hero) {
-        var link = ['/detail', hero.id];
-        this.router.navigate(link);
-    };
     DashboardComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
