@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router }            from '@angular/router';
 
-import { Hero } from './hero';
+import { Hero }        from './hero';
 import { HeroService } from './hero.service';
 
 @Component({
@@ -23,6 +23,7 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
+
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
@@ -32,6 +33,7 @@ export class HeroesComponent implements OnInit {
         this.selectedHero = null;
       });
   }
+
   delete(hero: Hero): void {
     this.heroService
       .delete(hero.id)

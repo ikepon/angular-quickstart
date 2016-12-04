@@ -3,7 +3,7 @@ import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
 import { HeroSearchService } from './hero-search.service';
-import { Hero } from './hero';
+import { Hero }              from './hero';
 
 @Component({
   moduleId: module.id,
@@ -19,7 +19,9 @@ export class HeroSearchComponent implements OnInit {
 
   constructor(
     private heroSearchService: HeroSearchService,
-    private router: Router) {}
+    private router: Router
+  ) {}
+
   // Push a search term into the observable stream.
   search(term: string): void {
     this.searchTerms.next(term);
@@ -40,6 +42,7 @@ export class HeroSearchComponent implements OnInit {
         return Observable.of<Hero[]>([]);
       });
   }
+
   gotoDetail(hero: Hero): void {
     let link = ['/detail', hero.id];
     this.router.navigate(link);
