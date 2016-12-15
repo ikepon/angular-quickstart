@@ -95,3 +95,87 @@ https://angular.io/docs/ts/latest/guide/pipes.html
 
 - Learn more later about the in-memory web API in the HTTP client chapter.
 https://angular.io/docs/ts/latest/guide/server-communication.html#!#in-mem-web-api
+
+
+
+
+
+## Angular2 の実装方法
+フレームワークってコードを書くルールってのがあると思う。
+それを理解するために、学んだことをざっと書いていく。
+
+★ 今後確認していく箇所に ★ マークを記述
+
+
+### Configuration files
+- package.json
+  依存する npm パッケージを記述
+- tsconfig.json
+  TypeScript から JSファイルをコンパイルするときの定義
+- systemjs.config.js
+  Application 内の Module のひも付けとパッケージの登録
+
+Tutorial をやっている過程でこの辺をいじることはなかった。
+
+systemjs.config.js 内の package 指定で app/main.js を指定してる。
+app/main.ts は基本的な構成を書いていて、その中で /app.module を読んでる。
+必要なパッケージは app.module.ts で指定していく（★）
+
+
+### index.html
+Application 全体のテンプレート。
+rails でいうところの layouts/application.html.erb 。
+
+
+### ベースは app.module.ts
+Application のエントリーポイント。
+設定は基本ここでやっていく。
+モジュールを `import` して それを使う形にいじって `export` するイメージ。
+
+Application 全体に関わる Module が必要であればここで指定する。
+※ ここは勉強する必要あり。まだあまり分かってない
+
+コンポーネントを新しく作った場合、ここで `import` して、`declarations` に書かないと使えない。
+※ この辺は空気を読んで自動で読み取って欲しいかも...
+
+
+### コンポーネント
+#### ファイル名前
+`hoge.component.ts` って component を付ける必要がありそう。
+
+#### コンポーネントの読み込み
+- `app.module.ts` 内で import
+  `import { HogeComponent } from './hoge.component';`
+- `app.module.ts` 内、 `@Component` の `declarations` に記述
+
+#### moduleId
+templateUrl, styleUrl を相対的にかけるようにする
+
+#### HTML, CSS
+`hoge.component.html` , `hoge.component.css` など同じ名前にして、`hoge.component.ts` 内で `templateUrl` , `styleUrls` に記述してやると読み込まれる。
+
+#### イベント
+- `hoge.component.html` 内に `(click)="onClick()"` とか記述して、 `hoge.component.ts` にその内容を記述する。
+※ `(click)` の後の関数名さえ揃えれば別に何でもいい。
+- `(ngModel)]=”test”` は双方向データバインド
+- `{{title}}` は片方向データバインド
+
+#### Angular 記法
+- ngFor: ループ処理
+- ngIf: 条件分岐
+- ngModel: あとで調べる ★
+
+
+### サービス
+Application 内の処理や状態を記述する
+#### ファイル名前
+`hoge.service.ts` って service って名前をつける必要がありそう。
+
+#### ファイルの読み込み方法
+- `app.module.ts` 内で import
+  `import { HogeService } from './hoge.service';`
+- `app.module.ts` 内、 `@Component` の `providers` に記述
+- 必要なコンポーネントでimportして使用する
+
+###
+router-outlet にrouteの子が表示される
