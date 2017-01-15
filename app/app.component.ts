@@ -22,12 +22,13 @@ const HEROES: Hero[] = [
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
-    <h2>{{hero.name}} details!</h2>
-    <div><label>id:</label>{{hero.id}}</div>
-    <div>
-      <label>name: </label>
-      <input [(ngModel)]="hero.name" placeholder="name"><br>
-      TODO: remove this: {{hero.name}}
+    <div *ngIf="selectedHero">
+      <h2>{{selectedHero.name}} details!</h2>
+      <div><label>id:</label>{{selectedHero.id}}</div>
+      <div>
+        <label>name: </label>
+        <input [(ngModel)]="selectedHero.name" placeholder="name"><br>
+      </div>
     </div>
     <h2>My Heroes</h2>
     <ul class="heroes">
@@ -94,4 +95,10 @@ export class AppComponent {
   };
 
   heroes = HEROES;
+
+  selectedHero: Hero;
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  };
 }
