@@ -164,6 +164,8 @@ templateUrl, styleUrl を相対的にかけるようにする
 - ngFor: ループ処理
 - ngIf: 条件分岐
 - ngModel: あとで調べる ★
+  Modelと関連してパラメータ名を付けてる
+  [(ngModel)]="password" だと .ts で password として取れる
 
 
 ### サービス
@@ -179,3 +181,26 @@ Application 内の処理や状態を記述する
 
 ###
 router-outlet にrouteの子が表示される
+
+
+### route の child
+- app-layout とかで使うとして、その router-outlet に child で指定したものが表示される。
+- layout として利用できる。
+- この辺の ViewChild とかが関係していると思う。
+https://github.com/leonis/quick-ticket-ohkid-front/commit/bf2be123a449c25ab3958c955ca029cea57c9a9b#diff-a152baf9d208c4914909da5625f9b4e6R1
+- route はこの辺に記述がある。
+https://github.com/leonis/quick-ticket-ohkid-front/commit/bf2be123a449c25ab3958c955ca029cea57c9a9b#diff-959f71d9b4ce6d41e637aaf363c42a18R12
+
+### Angular2 でのバブルアップ
+- Angular2ではバブルアップしないっぽい。
+- 必要なオブジェクトは必要なコンポーネントで呼び出す必要がある
+
+
+
+
+### イベントのフロー
+- HTML 内で受けるパラメータとイベント(clickとか)関数(request)を定義
+- .ts でその関数を定義(request)
+- APIを使う時などは serviceを定義する
+  - 使うサービスはファイルの最初で import しておく必要がある
+  - リクエストが発生する場合は、 @Component の中で providers に定義する必要がある
