@@ -6,13 +6,18 @@ import { FormsModule }   from '@angular/forms';
 
 // AppComponent を読みこんでる
 import { AppComponent }   from './app.component';
+// HeroDetailComponent を読み込んでる
+import { HeroDetailComponent } from './hero-detail.component';
 
 @NgModule({
   imports:      [
     BrowserModule,
     FormsModule
   ],
-  declarations: [ AppComponent ],
+  declarations: [
+    AppComponent,
+    HeroDetailComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
