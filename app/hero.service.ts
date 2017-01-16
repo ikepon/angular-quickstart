@@ -1,6 +1,13 @@
 import { Injectable } from '@angular/core';
 
-@Inject()
+import { Hero } from './hero';
+// heroes のモックを読み込む
+import  { HEROES } from './mock-heroes';
+
+
+@Injectable()
 export class HeroService {
-  getHeroes(): void {}
+  getHeroes(): Hero[] {
+    return HEROES;
+  }
 }
