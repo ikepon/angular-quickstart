@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 
 // AppComponent を読みこんでる
-import { AppComponent }   from './app.component';
+import { AppComponent }  from './app.component';
 // HeroDetailComponent を読み込んでる
 import { HeroDetailComponent } from './hero-detail.component';
 
