@@ -5,13 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { RouterModule }  from '@angular/router';
 
-// AppComponent を読みこんでる
 import { AppComponent }  from './app.component';
-// HeroesComponent を読み込んでる
+import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
-// HeroDetailComponent を読み込んでる
 import { HeroDetailComponent } from './hero-detail.component';
-// HeroService を読み込んでる
 import { HeroService } from './hero.service';
 
 @NgModule({
@@ -20,6 +17,10 @@ import { HeroService } from './hero.service';
     FormsModule,
     RouterModule.forRoot([
       {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
         path: 'heroes',
         component: HeroesComponent
       }
@@ -27,6 +28,7 @@ import { HeroService } from './hero.service';
   ],
   declarations: [
     AppComponent,
+    DashboardComponent,
     HeroesComponent,
     HeroDetailComponent
   ],
