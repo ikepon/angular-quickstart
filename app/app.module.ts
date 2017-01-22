@@ -3,6 +3,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // 2way binding のために必要
 import { FormsModule }   from '@angular/forms';
+import { RouterModule }  from '@angular/router';
 
 // AppComponent を読みこんでる
 import { AppComponent }  from './app.component';
@@ -14,9 +15,15 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
 
 @NgModule({
-  imports:      [
+  imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'heroes',
+        component: HeroesComponent
+      }
+    ])
   ],
   declarations: [
     AppComponent,
@@ -26,6 +33,7 @@ import { HeroService } from './hero.service';
   providers: [
     HeroService
   ],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [ AppComponent ]
 })
+
 export class AppModule { }
