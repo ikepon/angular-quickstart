@@ -6,8 +6,12 @@ import { FormsModule }   from '@angular/forms';
 
 // AppComponent を読みこんでる
 import { AppComponent }  from './app.component';
+// HeroesComponent を読み込んでる
+import { HeroesComponent } from './heroes.component';
 // HeroDetailComponent を読み込んでる
 import { HeroDetailComponent } from './hero-detail.component';
+// HeroService を読み込んでる
+import { HeroService } from './hero.service';
 
 @NgModule({
   imports:      [
@@ -16,7 +20,11 @@ import { HeroDetailComponent } from './hero-detail.component';
   ],
   declarations: [
     AppComponent,
+    HeroesComponent,
     HeroDetailComponent
+  ],
+  providers: [
+    HeroService
   ],
   bootstrap:    [ AppComponent ]
 })
